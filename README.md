@@ -13,7 +13,6 @@ An AngularJs directive that will validate if minimum age requirement is meet bas
 
 2. Use the directive on your view like this
     ```html
-    <pre>
       <input 
         ng-model="birthday" 
         type="text"       
@@ -22,5 +21,4 @@ An AngularJs directive that will validate if minimum age requirement is meet bas
         under-age-msg="You need to be at least 18 years old."
         title = "Please enter a valid birthdate."                                           
        >
-    </pre>
     ```
