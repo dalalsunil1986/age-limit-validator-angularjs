@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AngularJs Directive - Age Limit Validator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css">
+       
+        <style>
+            body{
+                padding-top:60px;
+            }
+        </style>
+    </head>
+    
+    <body ng-app="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7 col-sm-offset-3">
+                    <h1>Age Limit Validator - AngularJs Directive </h1>
+                    <br><br>
+                    <div ng-controller="MainController">
+                        <form  class="form-horizontal" action="/">
+                            <p> The form will not submit if the calculated age is less than 14 years old.</p>
+                            <div class="form-group">
+                                <label for="birthDay" class="col-xs-3  control-label">Birthday </label>
+                                <div class="col-xs-9 ">
+                                    <!-- input with age limit validator -->
+                                    <input placeholder="mm/dd/yyyy" 
+                                           class="form-control"
+                                           ng-model="birthday" 
+                                           type="text" 
+                                           id="birthDay" 
+                                           required 
+                                           age-limit 
+                                           min-age="14"                                          
+                                           under-age-msg="You need to be at least 14 years old."
+                                           title = "Please enter a valid birthdate."                                           
+                                           >
+                                </div>
+                            </div>
+                            <br><br><br>
+                            <div class="form-group">
+                                <label for="email" class="col-xs-3 control-label">Email </label>
+                                <div class="col-xs-9">
+                                  <input id="email" placeholder="enter email" name="email" tabindex="2" class="form-control" type="email" required ng-model="email">
+                                </div>
+                            </div>
+
+                            <input value="Enter" tabindex="3" class="btn btn-default" type="submit">			
+
+                        </form>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </body>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script> 
+    <script src="js/age-limit-validator-directive.js"></script>
+    <script>
+        (function(angular) {
+
+            'use strict';
+            angular.module('app', ['app.widget'])
+            .controller('MainController', ['$scope', function($scope) {                   
+                    $scope.email = 'my@gmail.com';                    
+                    $scope.birthday = "";
+            }]);
+
+        })(window.angular);
+    </script>
+    
+</html>
