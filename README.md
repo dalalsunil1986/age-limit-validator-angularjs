@@ -12,6 +12,7 @@ An AngularJs directive that will validate if minimum age requirement is meet bas
     </pre>
 
 2. Use the directive on your view like this
+    ```html
     <pre>
       <input 
         ng-model="birthday" 
@@ -22,3 +23,4 @@ An AngularJs directive that will validate if minimum age requirement is meet bas
         title = "Please enter a valid birthdate."                                           
        >
     </pre>
+    ```
