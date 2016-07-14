@@ -1,6 +1,8 @@
 # Age Limit Validator Directive - AngularJs
 
-An AngularJs directive that will validate if minimum age requirement is meet based from the entered date on the textbox.
+An AngularJs directive that will validate if the set minimum age requirement is meet based from the entered date on the input text box. Directive is using 
+HTML5 native validation so it plays nice on existing HTML5 forms. 
+
 
 # How to use?
 

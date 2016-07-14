@@ -10,13 +10,7 @@ angular.module('app.widget', [])
     .directive('ageLimit', function () {
         /*jslint unparam: true*/
         return {
-            require: 'ngModel', // get a hold of NgModelController           
             link: function ($scope, $element, $attrs,  ngModelCtrl) {
-
-                if (!ngModelCtrl) {
-                    throw new Error('ngModel is not set.');
-                }
-
                 var settings = {
                     minAge: 18,
                     underAgeMsg: 'You need to be at least 18 years old.',
@@ -56,7 +50,7 @@ angular.module('app.widget', [])
 
                 copyUserSettings($attrs, settings);
                 $element.on('focusout keydown', function (e) {
-                    var age = calculateAge(ngModelCtrl.$viewValue, settings);
+                    var age = calculateAge(e.target.value, settings);
                     e.target.setCustomValidity(""); //clear validation               
                     if (-1 === age && settings.title) {
                         e.target.setCustomValidity(settings.title);
