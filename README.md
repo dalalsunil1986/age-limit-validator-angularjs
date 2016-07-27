@@ -6,7 +6,7 @@ HTML5 native form validation so it plays nice on existing HTML5 forms.
 
 # How to use?
 
-1. Include the library in your existing AngularJs project like this?
+1. Include the library in your existing AngularJs project like this:
     <pre>
     angular.module('app', ['app.widget'])
              .controller('YourController', ['$scope', function($scope) {                 
