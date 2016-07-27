@@ -1,7 +1,7 @@
 # Age Limit Validator Directive - AngularJs
 
 An AngularJs directive that will validate if the set minimum age requirement is meet based from the entered date on the input text box. Directive is using 
-HTML5 native form validation so it plays nice on existing HTML5 forms. 
+HTML5 native form validation so it plays nice on existing HTML5 forms. Check-out [demo] 
 
 
 # How to use?
@@ -39,3 +39,4 @@ HTML5 native form validation so it plays nice on existing HTML5 forms.
         title = "Please enter a valid birthdate."                                           
        >
     ```
+[demo]: http://joecaps.com/blog/demo/age-validator-directive-in-angular.html
